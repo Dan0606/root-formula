@@ -1,0 +1,7 @@
+{
+    "theme" : {
+        "color" : "blue"
+    },
+    "music" : true,
+    "song" : "assets/unity.wav"
+}
