@@ -10,7 +10,16 @@
 from math import sqrt
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox
+import pygame
+from configer import Config
 
+
+config = Config()
+
+pygame.mixer.init()
+song = pygame.mixer.Sound(config.getSong())
+song.set_volume(0.15)
+pygame.mixer.Sound.play(song)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -90,7 +99,7 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(120, 270, 341, 171))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("sqrtImg.png"))
+        self.label.setPixmap(QtGui.QPixmap("assets/sqrtImg.png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.xLabel = QtWidgets.QLabel(self.centralwidget)
@@ -204,7 +213,7 @@ class Ui_MainWindow(object):
         self.sqrtSecPicture = QtWidgets.QLabel(self.centralwidget)
         self.sqrtSecPicture.setGeometry(QtCore.QRect(740, 70, 221, 71))
         self.sqrtSecPicture.setText("")
-        self.sqrtSecPicture.setPixmap(QtGui.QPixmap("sqrtImg.png"))
+        self.sqrtSecPicture.setPixmap(QtGui.QPixmap("assets/sqrtImg.png"))
         self.sqrtSecPicture.setScaledContents(True)
         self.sqrtSecPicture.setObjectName("sqrtSecPicture")
         self.minosBLabel2 = QtWidgets.QLabel(self.centralwidget)
@@ -250,7 +259,7 @@ class Ui_MainWindow(object):
         self.linePic = QtWidgets.QLabel(self.centralwidget)
         self.linePic.setGeometry(QtCore.QRect(630, 270, 171, 121))
         self.linePic.setText("")
-        self.linePic.setPixmap(QtGui.QPixmap("moshe.png"))
+        self.linePic.setPixmap(QtGui.QPixmap("assets/moshe.png"))
         self.linePic.setObjectName("linePic")
         self.slashLabel = QtWidgets.QLabel(self.centralwidget)
         self.slashLabel.setGeometry(QtCore.QRect(790, 220, 61, 221))
@@ -305,7 +314,7 @@ class Ui_MainWindow(object):
         self.linePic2 = QtWidgets.QLabel(self.centralwidget)
         self.linePic2.setGeometry(QtCore.QRect(850, 270, 171, 121))
         self.linePic2.setText("")
-        self.linePic2.setPixmap(QtGui.QPixmap("moshe.png"))
+        self.linePic2.setPixmap(QtGui.QPixmap("assets/moshe.png"))
         self.linePic2.setObjectName("linePic2")
         self.divideByALabel2 = QtWidgets.QLabel(self.centralwidget)
         self.divideByALabel2.setGeometry(QtCore.QRect(890, 330, 91, 61))
@@ -320,19 +329,19 @@ class Ui_MainWindow(object):
         self.arrow2pic = QtWidgets.QLabel(self.centralwidget)
         self.arrow2pic.setGeometry(QtCore.QRect(930, 150, 111, 101))
         self.arrow2pic.setText("")
-        self.arrow2pic.setPixmap(QtGui.QPixmap("arrow2.png"))
+        self.arrow2pic.setPixmap(QtGui.QPixmap("assets/arrow2.png"))
         self.arrow2pic.setScaledContents(True)
         self.arrow2pic.setObjectName("arrow2pic")
         self.arrow1pic = QtWidgets.QLabel(self.centralwidget)
         self.arrow1pic.setGeometry(QtCore.QRect(790, 150, 91, 111))
         self.arrow1pic.setText("")
-        self.arrow1pic.setPixmap(QtGui.QPixmap("arrow1.png"))
+        self.arrow1pic.setPixmap(QtGui.QPixmap("assets/arrow1.png"))
         self.arrow1pic.setScaledContents(True)
         self.arrow1pic.setObjectName("arrow1pic")
         self.mainArrowPic = QtWidgets.QLabel(self.centralwidget)
         self.mainArrowPic.setGeometry(QtCore.QRect(560, 480, 441, 61))
         self.mainArrowPic.setText("")
-        self.mainArrowPic.setPixmap(QtGui.QPixmap("mainArrow.png"))
+        self.mainArrowPic.setPixmap(QtGui.QPixmap("assets/mainArrow.png"))
         self.mainArrowPic.setScaledContents(True)
         self.mainArrowPic.setObjectName("mainArrowPic")
         self.background.raise_()
